@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психолог Мария Горенкова | Ижевск</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">Мария Горенкова</div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#education">Образование</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#about" class="mobile-link">Обо мне</a>
+            <a href="#services" class="mobile-link">Услуги</a>
+            <a href="#education" class="mobile-link">Образование</a>
+            <a href="#contact" class="mobile-link">Контакты</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Бережная психологическая поддержка</h1>
+            <p class="hero-subtitle">
+                Помогаю найти опору, спокойствие и восстановить самоценность.<br>
+                Трансперсональный подход и игра «Лила».
+            </p>
+            <a href="#contact" class="btn-primary">Записаться на консультацию</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container about-grid">
+            <div class="photo-block">
+                <div class="photo-placeholder">
+                    <span>Фото Марии</span>
+                </div>
+            </div>
+            <div class="text-block">
+                <h2>Давайте знакомиться</h2>
+                <p>Здравствуйте! Меня зовут Мария, мне 42 года. Я начинающий специалист в области психологии, закончила Московский институт психоанализа.</p>
+                <p>В своей работе я использую <strong>бережный формат</strong>. Я сама прошла путь восстановления после сложных жизненных ситуаций, поэтому хорошо понимаю состояние женщин, которые переживают трудные моменты.</p>
+                
+                <h3>С чем я помогаю:</h3>
+                <ul class="check-list">
+                    <li>Эмоциональная поддержка и разбор переживаний</li>
+                    <li>Вопросы отношений и самоценности</li>
+                    <li>Восстановление после кризисов</li>
+                    <li>Поиск опоры и спокойствия</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Варианты работы</h2>
+            <div class="services-grid">
+                
+                <div class="card">
+                    <h3>Индивидуальная консультация</h3>
+                    <p class="desc">Разбор вашей ситуации, эмоциональная поддержка, поиск решений.</p>
+                    <div class="price">1 600 ₽</div>
+                    <div class="duration">1 час 30 минут</div>
+                    <a href="#contact" class="btn-outline">Записаться</a>
+                </div>
+
+                <div class="card">
+                    <h3>Индивидуальная игра «Лила»</h3>
+                    <p class="desc">Глубокая работа с подсознанием через древнюю игру самопознания.</p>
+                    <div class="price">1 600 ₽</div>
+                    <div class="duration">1 час 30 минут</div>
+                    <a href="#contact" class="btn-outline">Записаться</a>
+                </div>
+
+                <div class="card">
+                    <h3>Групповая игра «Лила»</h3>
+                    <p class="desc">Трансформационная игра в поддерживающем окружении. (Цена за человека)</p>
+                    <div class="price">1 000 ₽</div>
+                    <div class="duration">до 4 часов</div>
+                    <a href="#contact" class="btn-outline">Записаться</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Дипломы и сертификаты</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <img src="images/diplom.jpg" alt="Диплом Московский Институт Психоанализа" onclick="openModal(this)">
+                </div>
+                <div class="cert-item">
+                    <img src="images/svidetelstvo.jpg" alt="Свидетельство АТПП" onclick="openModal(this)">
+                </div>
+                <div class="cert-item">
+                    <img src="images/certificate.jpg" alt="Сертификат конференции" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-col footer-about">
+                <div class="footer-logo">Мария Горенкова</div>
+                <p>Бережная психологическая поддержка. Помогаю найти опору, спокойствие и восстановить самоценность.</p>
+                <p class="copyright">© 2026 Мария Горенкова. Психолог.</p>
+            </div>
+
+            <div class="footer-col footer-nav">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#education">Образование</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contacts">
+                <h3>Контакты</h3>
+                <p class="working-mode">Работаю онлайн</p>
+                <a href="tel:+79292790004" class="footer-phone">+7 (929) 279-00-04</a>
+                
+                <div class="footer-socials">
+                    <a href="https://t.me/MaryaGorenkova" target="_blank" class="social-link">Telegram</a>
+                    <a href="https://www.avito.ru/brands/8b14929e7975c04ed6e7209f1679440d/all?gdlkerfdnwq=101&page_from=from_item_card&iid=7765714505&sellerId=21066e5d5be4e169b704defe930c8ba5" target="_blank" class="social-link">Avito</a>
+                    <a href="tel:+79292790004" class="social-link">Позвонить</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

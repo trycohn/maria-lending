@@ -1,0 +1,457 @@
+/* Общие настройки */
+:root {
+    --primary: #7A9E7E;      /* Шалфейный зеленый */
+    --primary-dark: #658469; /* Темный шалфей для наведения */
+    --bg-color: #F9F8F6;     /* Молочный фон */
+    --white: #ffffff;
+    --text-dark: #2C3E50;
+    --text-light: #5D6D7E;
+    --sand: #D8CFC4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.desktop-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.desktop-nav a {
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.desktop-nav a:hover {
+    color: var(--primary);
+}
+
+/* Бургер меню (мобильное) */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    border-radius: 2px;
+}
+
+.mobile-nav {
+    display: none;
+    background: var(--white);
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Главный экран */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #fdfbf7 0%, #eef2f3 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Кнопки */
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Секции */
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: #F2F4F3; /* Чуть темнее белого */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* Обо мне */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: var(--sand);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+.main-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.check-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.check-list li::before {
+    content: "•";
+    color: var(--primary);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+/* Карточки услуг */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    display: flex; /* Используем flex для одинаковой высоты */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.3s;
+    border-top: 4px solid var(--primary);
+    
+    /* Добавляем эти свойства для выравнивания кнопки вниз */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Чтобы карточки были одной высоты в ряду */
+    min-width: 300px;
+    max-width: 360px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.card .desc {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1; /* ЭТОТ ПУНКТ выталкивает всё, что ниже, к самому низу карточки */
+}
+
+.card .price {
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.card .duration {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+/* Дипломы */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cert-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.cert-item img:hover {
+    transform: scale(1.03);
+}
+
+/* Футер */
+.footer {
+    background-color: #2C3E50;
+    color: #ecf0f1;
+    padding: 80px 0 40px;
+    font-size: 0.95rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 60px;
+}
+
+.footer-col h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Колонка "Обо мне" */
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: #bdc3c7;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 350px;
+}
+
+.copyright {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+/* Колонка Навигации */
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav a {
+    color: #bdc3c7;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--primary);
+}
+
+/* Колонка Контакты */
+.working-mode {
+    color: #95a5a6;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-phone {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 25px;
+    transition: color 0.3s;
+}
+
+.footer-phone:hover {
+    color: var(--primary);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    padding: 8px 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.social-link:hover {
+    background: var(--white);
+    color: #2C3E50;
+    border-color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Адаптив футера */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-about p {
+        margin: 0 auto 20px;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+}
+
+/* Модальное окно (увеличение фото) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 200; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 768px) {
+    .desktop-nav { display: none; }
+    .burger-menu { display: flex; }
+    
+    .hero h1 { font-size: 2.2rem; }
+    
+    .about-grid { grid-template-columns: 1fr; }
+    .photo-placeholder { height: 300px; }
+    
+    .social-buttons { flex-direction: column; }
+    .btn-social { width: 100%; }
+}
