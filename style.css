@@ -450,7 +450,7 @@ header {
     .hero h1 { font-size: 2.2rem; }
     
     .about-grid { grid-template-columns: 1fr; }
-    .photo-placeholder { height: 300px; }
+    .photo-placeholder, .main-photo { height: 300px; }
     
     .social-buttons { flex-direction: column; }
     .btn-social { width: 100%; }
