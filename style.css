@@ -472,11 +472,14 @@ header {
     .certificates-layout {
         flex-direction: column;
     }
+
+    .cert-grid {
+        margin-bottom: 20px;
+    }
     
     .cert-main {
         flex: 0 0 100%;
         max-width: 100%;
-        margin-bottom: 20px;
     }
 }
 
