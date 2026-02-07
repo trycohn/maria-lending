@@ -202,6 +202,10 @@ header {
     border-radius: 20px;
 }
 
+.text-block h3 {
+    font-size: 1.5rem;
+}
+
 .check-list li {
     margin-bottom: 10px;
     padding-left: 25px;
